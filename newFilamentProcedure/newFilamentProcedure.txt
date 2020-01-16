@@ -2,8 +2,25 @@
 
 
 
-##	
-	### Summary
+Step 1: Calibrate your extruder (This only needs to be done when something changes)
+
+    Disconnect your hotend from the extruder.
+    Cut the filament flush with whatever fitting you have.
+    Using whatever interface you use to control your printer extrude 100mm/10cm of filament.
+        Your firmware may have a safety temperature preventing cold extrusion. If this is the case you will have to bring your hotend up to temp in order to extrude filament.
+    Cut the filament and repeat this procedure two more times.
+    Measure the three pieces of filament.
+    Get an average (add the three measurements and divide by 300).
+    If your average is not close to 100 you need to change your extruder steps per mm. Take the current steps per mm and divide it by (your average/100).
+    Repeat until you are happy.
+
+Step 2: Calibrate your filament diameter, do this every print!
+
+Using a caliper, measure your filament diameter at several locations. Average out the measurements, at least 3, and enter that into your slicer under filament diameter.
+
+Step 3: calibrate your z height and first layer. Do this whenever something changes in your printer.
+
+step 4:
 
 	A simple test for parts fitting. If the printer is properly set, the two parts should perfectly click together, like two Lego blocks.
 
@@ -33,4 +50,40 @@
 	    If the fit is still too loose, use value 0.875 (which is half the way between 0.85 and 0.9)
 	    If the fit is now too tight, use value 0.863 (which is half the way between 0.85 and 0.875)
 	    This value should be fine. It should be enough to round EM value to 3 decimals.
+
+
+Step 4.5: PID tune your bed and hotend.
+
+Before and after you calibrate temperatures and any time you change a fan or move something or a season changes. PID tune your hotend and bed to keep your temperature fluctuations to a minimum.
+
+    M303 E(Extruder 0 for hotend 1 for bed) C(# of cycles 3-8) S(Desired Temperature)
+    M303 E0 C5 S180 = PLA Hotend tune for 5 cycles
+
+Step 5: calibrate your temperatures.
+
+Do this for every different filament (color, brand, material, etc)
+
+    Grab a temperature calibration tower off thingiverse: https://www.thingiverse.com/thing:915435 4.3k
+    Set the temperature range to the range listed on your filament or by the manufacturer.
+    Print the calibration tower and choose the best temp.
+
+Step 6: Calibrate your fan speed.
+
+(I have a Delta with three really powerful layer fans. If they all three run at 100% the hotend loses temp)
+
+    Print your calibration tower again but change the fan speed vs the extruder temp.
+    Choose the best fan speed for the finish you desire.
+
+Step 6.5: PID tune your hotend again with the layer fan set to the ideal speed!
+
+As noted above if your fans in any way change the temperature of your hotend (all layer fans do) you should PID tune the hotend with the fan set at the most common speed to keep temperature fluctuations to a minimum.
+
+
+
+
+
+
+
+
+
 
