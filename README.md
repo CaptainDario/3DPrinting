@@ -9,4 +9,4 @@ videos worth watching for CR-10S Pro upgrades:
   * https://www.youtube.com/watch?v=VH3zrRNOGfA (inductive sensor)
 
 CR-10S Pro leveling guide:
- *
+ * https://www.youtube.com/watch?v=hitJUx3eKW8&t=359s
