@@ -10,3 +10,7 @@ other videos worth watching for CR-10S Pro upgrades:
 
 CR-10S Pro leveling guide:
  * https://www.youtube.com/watch?v=hitJUx3eKW8&t=359s
+
+
+finishing 3d prints:
+ https://www.youtube.com/watch?v=EoCmnN8iugc
